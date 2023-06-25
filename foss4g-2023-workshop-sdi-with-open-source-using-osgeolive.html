@@ -680,13 +680,13 @@ scripts
         
         
         var polygon = L.polygon([
-           [43.778,11.252],
-           [43.776,11.258],
-           [43.775,11.250]           
+           [42.209,20.740],
+           [42.206,20.748],
+           [42.205,20.734]
         ]).addTo(map);
         
         var popup = L.popup()
-           .setLatLng(42.209585 20.740615])
+           .setLatLng(42.220996 20.752281])
            .setContent("FOSS4G 2023 is here this year!")
            .openOn(map);
          </code></pre>
@@ -753,10 +753,6 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
         <li>
         <small><a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/usr/local/share/qgis/QGIS-NaturalEarth-Example.qgz&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/usr/local/share/qgis/QGIS-NaturalEarth-Example.qgz&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities</a></small></br></br></li>
         <li><small>TopPlus Open <a href="https://sgx.geodatenzentrum.de/wms_topplus_open?request=GetCapabilities&service=wms" target="_blank">https://sgx.geodatenzentrum.de/wms_topplus_open?request=GetCapabilities&service=wms</a></small></li>
-        <li><small>ISPRA WMS <a href="http://portalesgi.isprambiente.it/lista-servizi-wms/Geological%20Maps" target="_blank">http://portalesgi.isprambiente.it/lista-servizi-wms/Geological%20Maps</a></small></li>
-        <li><small>Regione Toscana<a href="https://www.regione.toscana.it/-/geoscopio-wms" target="_blank">https://www.regione.toscana.it/-/geoscopio-wms</a></small></li>
-        <li><small>Geoportale Nazionale<a href="http://www.pcn.minambiente.it/mattm/servizio-wms/" target="_blank">http://www.pcn.minambiente.it/mattm/servizio-wms/</a></small></li>
-         <li><small>INSPIRE Geoportal<a href="https://inspire-geoportal.ec.europa.eu/" target="_blank">https://inspire-geoportal.ec.europa.eu/</a></small></li> 
       </ul>
       </ul>
     </p>
@@ -765,23 +761,16 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
 <section>
 <h2>Exercise 10: Create a new Application in Mapbender</h2>
   <p>    </p>
-    <ul> 
+    <ul>
         <li>Your application should start with the extent of Prizren</li>
         <li>Copy Application mapbender_user and rename it to FOSS4G</li>
         <li>Switch to Layout → map-Element and set SRS EPSG:4326</li>
-        <li>Modify MAX EXTENT to Kosovo </br>lower left -180 -90 </br>upper right 180 90</li>
-        <li>Modify Start Extent Prizren </br>lower left 9.249264,41.779160 </br>upper right 13.249264,45.779160</li>
+        <li>Modify MAX EXTENT to Kosovo + </br>lower left minx 7 miny 32 </br>upper right maxx 33 maxy 52</li>
+        <li>Modify Start Extent Prizren </br>lower left minx 20.65 miny 42.11</br>upper right maxx 20.83 maxy 42.30</li>
         <li>Modify the scales to: </br><small>100000000,50000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500</small> </li>
       </ul>
     </p>
 </section> 
-
-
-
-
-
-   
-
 
 <section>
 <h2>Exercise 11: Add Services to your application</h2>
@@ -817,6 +806,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
     </p>
 </section> 
 
+<!--
 <section>
 <h2>Exercise 11: Search in the Kosovo Metadata Catalog for a Service</h2>
   <p>
@@ -825,6 +815,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
     </ul>
   </p>
 </section> 
+-->
 
 <section>
 <h2>Exercise 12: Add your new QGIS WMS to GeoNode or GeoNetwork</h2>
