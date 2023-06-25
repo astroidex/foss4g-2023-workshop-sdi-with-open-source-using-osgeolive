@@ -6,7 +6,7 @@
 
         <title>Setting up a Spatial Data Infrastructure (SDI) with Open Source Software using OSGeoLive</title>
 
-        <meta name="description" content="Workshop at FOSS4G 2022 Firenze Setting up a Spatial Data Infrastructure (SDI) with Open Source Software using OSGeoLive">
+        <meta name="description" content="Workshop at FOSS4G 2023 Prizren Setting up a Spatial Data Infrastructure (SDI) with Open Source Software using OSGeoLive">
         <meta name="author" content="Astrid Emde, OSGeo & some slides from other OSGeo members">    
     
         <link rel="stylesheet" href="_static/css/reveal.css">
@@ -44,7 +44,7 @@
           <div class="staticElements">
            
             <div class="headL">
-              <img src="img/foss4g2022/foss4g-2022.png"></img>
+              <img src="img/foss4g2023/foss4g-2023.png"></img>
             </div> 
             <div class="headR">
               <img src="img/osgeo/osgeo_o_logo.png"></img>
@@ -64,9 +64,9 @@
 <h3>Setting up a Spatial Data Infrastructure (SDI) with Open Source Software using OSGeoLive</h3>
 
 
-    <p><small>Astrid Emde, Enock Seth Nyamador, Nicolas Roelandt, Angelos Tzotzos</small></p>
+    <p><small>Astrid Emde | Angelos Tzotzos</small></p>
     <p><small><a href="https://2023.foss4g.org" title="FOSS4G 2023 Prizren">FOSS4G 2023 Prizren Kosovo</a></small></p>
-<img src="img/foss4g2022/osgeolive_menu.png" height="380">    
+<img src="img/foss4g2023/osgeolive_menu.png" height="480">
 </section>
 
 <section>
@@ -87,7 +87,7 @@
 
 <section>
 <h2>Workshop with OSGeoLive</h2>
-OSGeoLive 15 rc1 (August 2022)
+OSGeoLive 15 rc1 (June 2023)
  
     <p>
       <ul>
@@ -95,7 +95,7 @@ OSGeoLive 15 rc1 (August 2022)
         <li>Download Data & Presentation <small><a href="http://trac.osgeo.org/osgeolive/wiki/Live_GIS_Workshop_Install" target="_blank">http://trac.osgeo.org/osgeolive/wiki/Live_GIS_Workshop_Install</a></small></li>
       </ul>
     </p>
-<img src="img/foss4g2022/osgeolive_menu.png" height="300">       
+<img src="img/foss4g2023/osgeolive_menu.png" height="400">
 </section>
 
 <section>
@@ -175,14 +175,14 @@ scripts
       </ul>
     </p>
     <p>
-        <img src="img/foss4g2022/sdi_components.png" height="500">           
+        <img src="img/foss4g2023/sdi_components.png" height="500">
     </p>
 </section> 
 
 <section>
 <h2>SDI Components</h2>
     <p>
-        <img src="img/foss4g2022/sdi_components_os.png" height="500">           
+        <img src="img/foss4g2023/sdi_components_os.png" height="500">
     </p>
 <!--
 file system
@@ -260,7 +260,7 @@ First Goal: create your first data store
 <h2>Database</h2>
 <h3>PostgreSQL & PostGIS</h3>
     <p>
-        <img src="img/foss4g2022/db_elefanten.png" height="400">           
+        <img src="img/foss4g2023/db_elefanten.png" height="400">
     </p>
 
     <p>
@@ -318,8 +318,8 @@ First Goal: create your first data store
     <p>
       <ul>  
         <li>Find the data at /home/user/data/natural_earth2/ne_10m_admin_1_states_provinces_shp.shp</li>
-        <li>Provinces of Italy</li>
-        <li>Filter show only admin = 'Italy'</li>
+        <li>Provinces of Kosovo</li>
+        <li>Filter show only admin = 'Kosovo'</li>
         <li>Label with column <b>name</b></li>
         
       </ul>
@@ -346,7 +346,7 @@ First Goal: create your first data store
 <section>
 <h2>Create a new PostgreSQL Connection in QGIS</h2>
     <p>
-        <img src="img/foss4g2022/qgis_db_connection.png" height="500">           
+        <img src="img/foss4g2023/qgis_db_connection.png" height="500">
     </p>
 </section>
 
@@ -367,7 +367,7 @@ First Goal: create your first data store
 <section>
 <h2>QGIS DB Manager Import</h2>
     <p>
-        <img src="img/foss4g2022/qgis_db_manager_import.png" height="500">           
+        <img src="img/foss4g2023/qgis_db_manager_import.png" height="500">
     </p> 
 </section>
 
@@ -375,8 +375,8 @@ First Goal: create your first data store
 <h2>Exercise 4: Import & Export</h2>
     <p>
       <ul>  
-        <li>Import provinces from Natural Earth data (only Italy)</li>
-        <li>Import populated places from Natural Earth data (only Italy)</li>
+        <li>Import provinces from Natural Earth data (only Kosovo)</li>
+        <li>Import populated places from Natural Earth data (only Kosovo)</li>
         <li>Add the table from your database to your QGIS project (drag & drop) 
         <li>Export: Save populated places as geopackage via DB Manager or via QGIS save as ...</li>
         
@@ -476,7 +476,7 @@ GRANT USAGE ON SEQUENCE countries_gid_seq TO workshop_writer;
 
 -- change to user wilma
 Select * from countries;
-Update countries set name = 'TEST' WHERE name = 'Italy';
+Update countries set name = 'TEST' WHERE name = 'Kosovo';
          </code></pre>
     </p>
 </section> 
@@ -484,7 +484,7 @@ Update countries set name = 'TEST' WHERE name = 'Italy';
 <section>
 <h2>Service</h2>
     <p>
-        <img src="img/foss4g2022/request_response.png" height="500">           
+        <img src="img/foss4g2023/request_response.png" height="500">
     </p> 
 <!--
 file system
@@ -531,7 +531,7 @@ scripts
 <section>
 <h2></h2>
     <p>
-        <img src="img/foss4g2022/ogc_web_service_framework.png" height="500">           
+        <img src="img/foss4g2023/ogc_web_service_framework.png" height="500">
     </p> 
     <a href="https://live.osgeo.org/archive/10.5/en/standards/standards.html" target="_blank">https://live.osgeo.org/archive/10.5/en/standards/standards.html</a>
 </section>
@@ -650,7 +650,7 @@ scripts
       </ul>
     </p>
     <p>
-        <img src="img/foss4g2022/leaflet.png" height="400">           
+        <img src="img/foss4g2023/leaflet.png" height="400">
     </p>     
 </section> 
 
@@ -660,7 +660,7 @@ scripts
     <ul> 
         <li>Copy paste leaflet files from /var/www → desktop</li>
         <li>Fix libraries URLs</li>
-        <li>Fix coordinates to Firenze 43.779 11.249</li>
+        <li>Fix coordinates to Prizren (Bridge Ura e Gurit) 42.209585 20.740615</li>
     </ul>
     <p>
         <pre><code class="sql">
@@ -670,9 +670,9 @@ scripts
         //In case we are offline, start TileStache to get a base layer
         L.tileLayer('http://localhost:8012/example/{z}/{x}/{y}.png',{}).addTo(map);
 
-        var marker = L.marker([43.779,11.249]).addTo(map);            
+        var marker = L.marker([42.209585,20.740615]).addTo(map);            
 
-        var circle = L.circle([43.777,11.242], 250, {
+        var circle = L.circle([42.209585 20.740615], 250, {
            color: 'red',
            fillColor: '#f03',
            fillOpacity: 0.5
@@ -686,8 +686,8 @@ scripts
         ]).addTo(map);
         
         var popup = L.popup()
-           .setLatLng(43.779,11.249])
-           .setContent("FOSS4G 2022 is here this year!")
+           .setLatLng(42.209585 20.740615])
+           .setContent("FOSS4G 2023 is here this year!")
            .openOn(map);
          </code></pre>
     </p>
@@ -730,7 +730,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
       </ul>
     </p>
     <p>
-        <img src="img/foss4g2022/mapbender.png" height="400">           
+        <img src="img/foss4g2023/mapbender.png" height="400">
     </p> 
 </section> 
 
@@ -766,11 +766,11 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
 <h2>Exercise 10: Create a new Application in Mapbender</h2>
   <p>    </p>
     <ul> 
-        <li>Your application should start with the extent of Firenze</li>
+        <li>Your application should start with the extent of Prizren</li>
         <li>Copy Application mapbender_user and rename it to FOSS4G</li>
         <li>Switch to Layout → map-Element and set SRS EPSG:4326</li>
-        <li>Modify MAX EXTENT to Italy </br>lower left -180 -90 </br>upper right 180 90</li>
-        <li>Modify Start Extent Firenze </br>lower left 9.249264,41.779160 </br>upper right 13.249264,45.779160</li>
+        <li>Modify MAX EXTENT to Kosovo </br>lower left -180 -90 </br>upper right 180 90</li>
+        <li>Modify Start Extent Prizren </br>lower left 9.249264,41.779160 </br>upper right 13.249264,45.779160</li>
         <li>Modify the scales to: </br><small>100000000,50000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500</small> </li>
       </ul>
     </p>
@@ -818,10 +818,10 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
 </section> 
 
 <section>
-<h2>Exercise 11: Search in the Italy Metadata Catalog for a Service</h2>
+<h2>Exercise 11: Search in the Kosovo Metadata Catalog for a Service</h2>
   <p>
     <ul>
-      <li>Agency for Digital Italy: <a href="https://geodati.gov.it/geoportale/eng/" target="_blank">https://geodati.gov.it/geoportale/eng/</a></li>
+      <li>Agency for Digital Kosovo: <a href="https://geodati.gov.it/geoportale/eng/" target="_blank">https://geodati.gov.it/geoportale/eng/</a></li>
     </ul>
   </p>
 </section> 
@@ -836,7 +836,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
       </ul>
     </p>
        <p>
-        <img src="img/foss4g2022/geonode.png" height="450">           
+        <img src="img/foss4g2023/geonode.png" height="450">
     </p>  
 </section> 
 
@@ -857,14 +857,14 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
 
 
 <section>
-<h2>FOSS4G 2022 Firenze</h2>
+<h2>FOSS4G 2023 Prizren</h2>
 </br>
     <p>We hope you enjoyed the workshop
     </p>
-    <a href="https://talks.osgeo.org/foss4g-2022-workshops/talk/XVFSWH/" target="_blank">https://talks.osgeo.org/foss4g-2022-workshops/talk/XVFSWH/</a>
+    <a href="https://talks.osgeo.org/foss4g-2023-workshops/talk/XVFSWH/" target="_blank">https://talks.osgeo.org/foss4g-2023-workshops/talk/XVFSWH/</a>
 
   <p>
-      <img src="img/foss4g2022/foss4g-2022.png" height="100">
+      <img src="img/foss4g2023/foss4g-2023.png" height="100">
   <p>    
 </section> 
 </div>
