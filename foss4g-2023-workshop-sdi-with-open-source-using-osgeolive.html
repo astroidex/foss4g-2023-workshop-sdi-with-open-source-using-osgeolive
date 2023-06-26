@@ -753,6 +753,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
         <li>
         <small><a href="http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/usr/local/share/qgis/QGIS-NaturalEarth-Example.qgz&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" target="_blank">http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/usr/local/share/qgis/QGIS-NaturalEarth-Example.qgz&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities</a></small></br></br></li>
         <li><small>TopPlus Open <a href="https://sgx.geodatenzentrum.de/wms_topplus_open?request=GetCapabilities&service=wms" target="_blank">https://sgx.geodatenzentrum.de/wms_topplus_open?request=GetCapabilities&service=wms</a></small></li>
+        <li><small>Kosovo Web Map Service<a href="http://geoportal.rks-gov.net/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities" target="_blank">http://geoportal.rks-gov.net/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities</a></small></li>
       </ul>
       </ul>
     </p>
@@ -768,6 +769,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
         <li>Modify MAX EXTENT to Kosovo + </br>lower left minx 7 miny 32 </br>upper right maxx 33 maxy 52</li>
         <li>Modify Start Extent Prizren </br>lower left minx 20.65 miny 42.11</br>upper right maxx 20.83 maxy 42.30</li>
         <li>Modify the scales to: </br><small>100000000,50000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500</small> </li>
+        <li>Add EPSG:9144 to the list <a href="https://epsg.io/9144">https://epsg.io/9144</a></li>
       </ul>
     </p>
 </section> 
@@ -778,7 +780,7 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
     <ul> 
         <li>Your application should show your QGIS WMS and some other external WMS</li>
         <li>Go to Tab Layerset</li>
-        <li>Add WMS via +</li>
+        <li>Add WMS via + http://geoportal.rks-gov.net/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities</li>
     </ul>
   </p>
 </section> 
@@ -806,16 +808,17 @@ var layerControl = L.control.layers(baseMaps).addTo(map);
     </p>
 </section> 
 
-<!--
+
 <section>
-<h2>Exercise 11: Search in the Kosovo Metadata Catalog for a Service</h2>
+<h2>Exercise 11: Have a look at the Kosovo Geoportal</h2>
   <p>
     <ul>
-      <li>Agency for Digital Kosovo: <a href="https://geodati.gov.it/geoportale/eng/" target="_blank">https://geodati.gov.it/geoportale/eng/</a></li>
+      <li>Agency for Digital Kosovo: <a href="http://geoportal.rks-gov.net/" target="_blank">http://geoportal.rks-gov.net/</a></li>
+      <li>https://epsg.io/9144</li>
     </ul>
   </p>
 </section> 
--->
+
 
 <section>
 <h2>Exercise 12: Add your new QGIS WMS to GeoNode or GeoNetwork</h2>
